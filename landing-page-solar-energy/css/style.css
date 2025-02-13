@@ -462,8 +462,57 @@ main .hero-section .container .hero-section-text p {
 }
 
 
+/* Shop Section */
+#shop header {
+  max-width: 936px;
+  margin: auto;
+}
+
+#shop header p {
+  margin-block: 20px;
+}
+
+#shop .items-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+#shop .items-container .item {
+  width: 100%;
+  box-shadow: 0 4px 30px 0 rgba(0, 0, 0, 0.05);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+#shop .items-container .item .img-box img {
+  width: 100%;
+  object-fit: cover;
+}
+
+#shop .items-container .item .item-body {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 16px;
+}
+
+#shop .items-container .item .item-body p {
+  font-weight: 400;
+  color: var(--heading-subtext-color);
+}
+
 
 /* Media Query */
+@media screen and (min-width:676px) {
+
+  #shop .items-container .item {
+    width: calc(100% / 2 - 30px);
+  }
+}
+
 @media screen and (min-width:768px) {
   .container {
     width: 90%;
@@ -516,4 +565,11 @@ main .hero-section .container .hero-section-text p {
     margin-bottom: 0;
   }
 
+
+}
+
+@media screen and (min-width:1024px) {
+  #shop .items-container .item {
+    width: calc(100% / 3 - 20px);
+  }
 }
