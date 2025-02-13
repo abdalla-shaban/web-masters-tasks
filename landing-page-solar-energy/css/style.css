@@ -436,6 +436,31 @@ main .hero-section .container .hero-section-text p {
   width: 90px;
 }
 
+/* CTA Section */
+
+#cta {
+  background-image: url("../images/windmill.png");
+  background-position: center, center;
+  background-size: cover;
+  height: 505px;
+}
+
+#cta .container {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+#cta .cta-content {
+  max-width: 678px;
+  padding: 0 20px;
+}
+
+#cta .cta-content p {
+  margin-block: 20px;
+  max-width: 80%;
+}
+
 
 
 /* Media Query */
