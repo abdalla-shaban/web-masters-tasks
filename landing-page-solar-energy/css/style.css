@@ -9,7 +9,8 @@
   box-sizing: border-box;
 }
 
-body {
+body,
+button {
   font-family: "Inter", serif;
 }
 
@@ -49,6 +50,23 @@ img {
 
 /* Utilities */
 
+.section-spacing {
+  padding: 40px 0;
+  margin: 30px 0;
+}
+
+.font-sm {
+  font-size: var(--font-size-sm);
+}
+
+.font-md {
+  font-size: var(--font-size-md);
+}
+
+.font-lg {
+  font-size: var(--font-size-lg);
+}
+
 .btn {
   padding: 12px 16px;
   outline: none;
@@ -57,6 +75,7 @@ img {
   cursor: pointer;
   border-width: 1px;
   border-style: solid;
+  font-size: var(--font-size-sm);
 }
 
 .btn-main {
@@ -84,6 +103,10 @@ img {
 
 .bg-main-color {
   background-color: var(--main-color);
+}
+
+.bg-secondary-color {
+  background-color: var(--secondary-color);
 }
 
 .bg-main-color-darker {
@@ -236,6 +259,7 @@ h2.light {
 /* Navbar */
 nav {
   position: fixed;
+  z-index: 99999;
   top: 0;
   left: 0;
   width: 100%;
@@ -341,6 +365,79 @@ main .hero-section .container .hero-section-text p {
 }
 
 
+/* Trade Section */
+
+#trade .container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+#trade .images-box {
+  width: 100%;
+  position: relative;
+}
+
+#trade .trade-content {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+#trade .trade-content h2 {
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+#trade .trade-content .trade-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 40px;
+  counter-reset: list-counter;
+}
+
+#trade .trade-content .trade-list li {
+  position: relative;
+  counter-increment: list-counter;
+  padding-left: 30px;
+}
+
+#trade .trade-content .trade-list li::before {
+  content: counter(list-counter, decimal-leading-zero) "/ ";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  font-weight: bold;
+  color: var(--green-color);
+}
+
+#trade .trade-content .trade-list li p {
+  color: var(--heading-text-color);
+  font-weight: 600;
+}
+
+#trade .solar-charging {
+  display: none;
+  border-radius: 16px;
+  padding: 20px;
+}
+
+#trade .trade-img {
+  max-height: 552px;
+}
+
+#trade .solar-charging figcaption {
+  margin: 12px 0;
+  padding-top: 12px;
+}
+
+#trade .solar-charging img {
+  width: 90px;
+}
+
+
+
 /* Media Query */
 @media screen and (min-width:768px) {
   .container {
@@ -373,4 +470,25 @@ main .hero-section .container .hero-section-text p {
   h2.light {
     font-size: var(--font-size-xl);
   }
+
+  #trade .solar-charging {
+    display: block;
+    position: absolute;
+    max-width: 250px;
+    text-align: left;
+    bottom: 2%;
+    left: -10%;
+    border-radius: 16px;
+  }
+
+  #trade .images-box {
+    width: 35%;
+  }
+
+  #trade .trade-content {
+    width: 60%;
+    max-width: 594px;
+    margin-bottom: 0;
+  }
+
 }
