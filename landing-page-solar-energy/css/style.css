@@ -27,6 +27,7 @@ img {
   --main-color-darker: #0A8C7E;
   --green-color: #84BD3A;
   --secondary-color: #FFBB1C;
+  --light-color: #FFFFFF;
   --dark-color: #283646;
   --subtext-color: #92989F;
   --dark-text-color: #2A3334;
@@ -38,4 +39,54 @@ img {
   --font-size-lg: 20px;
   --font-size-md: 18px;
   --font-size-sm: 14px;
+}
+
+/* Utilities */
+
+h1 {
+  font-size: var(--font-size-xxl);
+  color: var(--light-color);
+}
+
+h2.dark,
+h2.light {
+  font-size: var(--font-size-xl);
+}
+
+h2.dark {
+  color: var(--heading-text-color);
+}
+
+h2.light {
+  color: var(--light-color);
+}
+
+.p-base-heading-subtext-gray {
+  color: var(--heading-subtext-color);
+}
+
+.p-lg-subtext-light {
+  color: var(--light-color);
+}
+
+.p-md-heading {
+  color: var(--heading-text-color);
+  font-size: var(--font-size-md);
+}
+
+.p-md-dark {
+  color: var(--dark-text-color);
+  font-size: var(--font-size-md);
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
