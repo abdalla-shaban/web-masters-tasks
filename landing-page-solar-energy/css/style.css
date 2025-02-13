@@ -1,0 +1,41 @@
+/* Global Styles */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+:root {
+  --main-color: #0B9586;
+  --main-color-lighter: #3CAB90;
+  --main-color-lighter-bg: rgba(60, 171, 144, 0.05);
+  --main-color-darker: #0A8C7E;
+  --green-color: #84BD3A;
+  --secondary-color: #FFBB1C;
+  --dark-color: #283646;
+  --subtext-color: #92989F;
+  --dark-text-color: #2A3334;
+  --heading-text-color: #101828;
+  --heading-subtext-color: #475467;
+  --gray-color: #B3BDC7;
+  --font-size-xxl: 52px;
+  --font-size-xl: 42px;
+  --font-size-lg: 20px;
+  --font-size-md: 18px;
+  --font-size-sm: 14px;
+}
