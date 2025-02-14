@@ -483,7 +483,7 @@ main .hero-section .container .hero-section-text p {
 #shop .items-container .item {
   width: 100%;
   box-shadow: 0 4px 30px 0 rgba(0, 0, 0, 0.05);
-  border-radius: 8px;
+  border-radius: 12px;
   overflow: hidden;
 }
 
@@ -532,6 +532,64 @@ main .hero-section .container .hero-section-text p {
 #planning-environment header p {
   max-width: 770px;
   margin: auto;
+}
+
+
+/* Energy Products Section */
+#energy-products .container {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+#energy-products .energy-products-header {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin: auto;
+}
+
+#energy-products .energy-products-header img {
+  width: 56px;
+}
+
+#energy-products .products-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+
+#energy-products .products-container .product {
+  width: 310px;
+  overflow: hidden;
+  border: 1px solid var(--main-color);
+  background-color: var(--main-color-lighter-bg);
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 4px 30px 0 rgba(0, 0, 0, 0.05);
+}
+
+#energy-products .products-container .product img {
+  border-radius: 10px;
+}
+
+#energy-products .products-container .product .product-body {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+#energy-products .products-container .product .product-body h4 {
+  font-size: var(--font-size-lg);
+  font-weight: 600;
+  color: var(--heading-text-color);
+}
+
+#energy-products .products-container .product .product-body p {
+  color: var(--heading-subtext-color);
 }
 
 /* Media Query */
@@ -592,6 +650,21 @@ main .hero-section .container .hero-section-text p {
     width: 60%;
     max-width: 594px;
     margin-bottom: 0;
+  }
+
+  #energy-products .container {
+    flex-direction: row;
+    gap: 0;
+  }
+
+  #energy-products .energy-products-header {
+    max-width: 30%;
+    margin: 0;
+  }
+
+  #energy-products .products-container {
+    justify-content: flex-end;
+    padding-inline: 40px;
   }
 
 
