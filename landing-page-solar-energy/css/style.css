@@ -9,6 +9,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body,
 button {
   font-family: "Inter", serif;
@@ -755,6 +759,105 @@ main .hero-section .container .hero-section-text p {
   transform: rotate(180deg);
 }
 
+/* Footer */
+
+footer {
+  background-color: var(--dark-color);
+}
+
+footer .container {
+  display: flex;
+  flex-direction: column;
+  gap: 54px;
+}
+
+footer #contact {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 40px;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--light-color);
+  border-bottom: 1px solid #71777D;
+  padding-bottom: 54px;
+}
+
+footer #contact .footer-about a img {
+  height: 60px;
+}
+
+footer #contact .footer-about ul {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  padding-top: 40px;
+}
+
+footer #contact .footer-form h4 {
+  font-weight: 400;
+  font-size: 16px;
+  margin-bottom: 12px;
+}
+
+footer #contact .footer-form form {
+  position: relative;
+  width: 100%;
+  width: 266px;
+}
+
+footer #contact .footer-form form input {
+  padding: 12px 20px;
+  width: 100%;
+  flex: 1;
+  background-color: rgba(255, 255, 255, 0.09);
+  border-radius: 32px;
+  border: 1px solid var(--gray-color);
+  outline: none;
+  color: var(--light-color);
+}
+
+footer #contact .footer-form form button {
+  padding: 12px 32px;
+  border-radius: 32px;
+  position: absolute;
+  right: 0;
+  border: 1px solid var(--secondary-color);
+  background-color: var(--secondary-color);
+  color: var(--light-color);
+}
+
+footer .quick-links {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+  text-align: center;
+  align-items: center;
+  color: #92989F;
+}
+
+footer .quick-links ul {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  font-size: 12px;
+}
+
+footer .quick-links ul li:not(:last-child) {
+  position: relative;
+  padding-right: 10px;
+}
+
+footer .quick-links ul li:not(:last-child)::after {
+  content: "|";
+  position: absolute;
+  right: -10px;
+}
+
+
 /* Media Query */
 @media screen and (min-width:676px) {
 
@@ -765,6 +868,10 @@ main .hero-section .container .hero-section-text p {
   #testimonials .testimonials-container .testimonial-item-footer {
     flex-direction: row;
     gap: 0;
+  }
+
+  footer #contact .footer-form form {
+    width: 406px;
   }
 }
 
@@ -844,5 +951,13 @@ main .hero-section .container .hero-section-text p {
 @media screen and (min-width:1024px) {
   #shop .items-container .item {
     width: calc(100% / 3 - 20px);
+  }
+
+  footer #contact {
+    flex-direction: row;
+  }
+
+  footer #contact .footer-form form {
+    width: 406px;
   }
 }
