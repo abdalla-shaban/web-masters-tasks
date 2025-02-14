@@ -592,6 +592,51 @@ main .hero-section .container .hero-section-text p {
   color: var(--heading-subtext-color);
 }
 
+
+/* Values Section */
+#values header p {
+  margin-top: 20px;
+}
+
+#values .values-container {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+#values .values-container .value {
+  max-width: 358px;
+  padding: 32px;
+  background-color: var(--main-color-lighter-bg);
+  border-radius: 12px;
+  border: 1px solid var(--main-color);
+}
+
+#values .values-container .value img {
+  width: 70px;
+}
+
+#values .values-container .value .value-body {
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+#values .values-container .value .value-body h4 {
+  font-weight: 600;
+  font-size: var(--font-size-lg);
+  color: var(--heading-text-color);
+}
+
+#values .values-container .value .value-body p {
+  color: var(--heading-subtext-color);
+}
+
+
+
 /* Media Query */
 @media screen and (min-width:676px) {
 
