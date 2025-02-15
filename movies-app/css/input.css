@@ -1,0 +1,73 @@
+@import "tailwindcss";
+
+@theme {
+  --font-poppins: 'Poppins', sans-serif;
+  --color-main: #ff2c1f;
+  --color-dark: #020307;
+  --color-light: #fff;
+}
+
+section {
+  @apply px-6 py-[4.5rem] max-[991px]:px-[4%] max-[991px]:py-[50px]
+}
+
+header.shadow {
+  @apply bg-light shadow-[0_0_4px_rgb(14_55_54_/_15%)]
+}
+
+header.shadow .logo, header.shadow .logo i {
+  @apply text-dark
+}
+
+.navbar li {
+  @apply relative
+}
+
+.navbar a {
+  @apply font-medium text-[1rem] text-main max-[774px]:text-dark transition-all duration-[0.3s] ease-linear max-[774px]:hover:text-main max-[774px]:border-b-2 max-[774px]:hover:border-b-main max-[774px]:border-transparent
+}
+
+.navbar a::after {
+  @apply content-[''] absolute bg-main w-0 h-[3px] start-0 bottom-[-4px] transition-all ease-linear duration-[0.4s] max-[774px]:hidden;
+}
+
+.navbar.active {
+  @apply top-full
+}
+
+.navbar a:hover::after,
+.navbar .home-active::after {
+  @apply w-full
+}
+
+header.shadow #menu-icon {
+  @apply max-[774px]:text-dark
+}
+
+.box .box-img {
+  @apply w-full h-[270px]
+}
+
+.box-img img {
+  @apply w-full h-full object-cover cursor-pointer transition-all duration-[0.2s] ease-linear hover:translate-y-[-10px] max-[370px]:h-[240px]
+}
+
+.box h3 {
+  @apply text-[0.9rem] font-medium text-main
+}
+
+.box span {
+  @apply text-[13px]
+}
+
+.heading {
+  @apply font-medium text-[1.2rem] uppercase border-b border-main max-w-[1000px] mx-auto
+}
+
+html::-webkit-scrollbar {
+  @apply w-[0.5rem] bg-dark
+}
+
+html::-webkit-scrollbar-thumb {
+  @apply bg-main rounded-[5rem]
+}
