@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile</title>
+    <link rel="stylesheet" href="./css/output.css" />
+  </head>
+  <body>
+    <main
+      class="min-h-screen bg-[#F2F2F2] gap-6 md:gap-8 flex flex-col pt-[25px] lg:pt-[40px] items-center overflow-hidden relative before:content-[''] before:absolute before:bottom-[-2319px] before:size-[2419px] before:bg-secondary before:rounded-full"
+    >
+      <div class="flex flex-col gap-6">
+        <h1 class="text-3xl font-semibold text-main" id="welcome"></h1>
+        <div class="flex items-center gap-1">
+          <span class="font-medium text-dark">Email:</span>
+          <span class="font-semibold text-secondary" id="userEmail"></span>
+        </div>
+        <button
+          id="logout"
+          class="px-4 py-2 duration-300 border-2 border-transparent rounded-lg cursor-pointer bg-red-500/90 text-light hover:bg-transparent hover:text-red-500/90 hover:border-red-500"
+        >
+          Logout
+        </button>
+      </div>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="./js/main.js" type="module"></script>
+  </body>
+</html>

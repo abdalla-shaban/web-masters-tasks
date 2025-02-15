@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Authentication System</title>
+    <link rel="stylesheet" href="./css/output.css" />
+  </head>
+  <body>
+    <main
+      class="min-h-screen bg-[#F2F2F2] gap-6 md:gap-8 flex flex-col pt-[25px] lg:pt-[40px] items-center overflow-hidden relative before:content-[''] before:absolute before:bottom-[-2319px] before:size-[2419px] before:bg-secondary before:rounded-full"
+    >
+      <header class="max-w-[519px] mx-auto text-center px-4">
+        <h1 class="mb-4 font-semibold text-3xl lg:text-[56px]" id="heading">
+          Sign up
+        </h1>
+        <p class="text-lg lg:text-[32px]" id="heading-desc">
+          Hello ! let’s join with us.
+        </p>
+      </header>
+      <form class="w-full max-w-[700px] mx-auto flex flex-col gap-6 px-4">
+        <div class="flex flex-col w-full gap-6 lg:items-center lg:flex-row">
+          <div class="flex-1 input" id="nameInputBox">
+            <label for="name">Name</label>
+            <input
+              id="name"
+              name="name"
+              type="text"
+              placeholder="enter your name"
+            />
+          </div>
+          <div class="flex-1 input">
+            <label for="email">Email</label>
+            <input
+              id="email"
+              name="email"
+              type="email"
+              placeholder="enter your email"
+            />
+          </div>
+        </div>
+        <div class="input">
+          <label for="password">Password</label>
+          <input
+            id="password"
+            name="password"
+            type="password"
+            placeholder="enter your password"
+          />
+        </div>
+        <div class="input" id="confirmPasswordInputBox">
+          <label for="confirm-password">Confirm Password</label>
+          <input
+            id="confirm-password"
+            name="confirm-password"
+            type="password"
+            placeholder="enter your password"
+          />
+        </div>
+        <button class="main-btn">Sign up</button>
+      </form>
+      <div
+        class="grow-[1] flex items-end text-light pb-[10px] sm:pb-[30px] justify-center w-full relative"
+      >
+        <div class="flex flex-wrap items-center justify-center gap-4">
+          <p class="text-lg" id="toggle-auth-desc">Do you have an account?</p>
+          <button class="font-medium underline cursor-pointer" id="toggle-auth">
+            Sign in
+          </button>
+        </div>
+      </div>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="./js/main.js" type="module"></script>
+  </body>
+</html>
