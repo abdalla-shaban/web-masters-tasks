@@ -97,8 +97,10 @@ const handleSignIn = () => {
         confirmButtonText: "Go to Profile",
       }).then((result) => {
         result.isConfirmed
-          ? (location.pathname = "/authentication-system/profile.html")
-          : (location.pathname = "/authentication-system/profile.html");
+          ? (location.pathname =
+              "web-masters-tasks/authentication-system/profile.html")
+          : (location.pathname =
+              "web-masters-tasks/authentication-system/profile.html");
       });
     } else {
       Swal.fire({
@@ -153,12 +155,12 @@ toggleAuthBtn?.addEventListener("click", handleAuthToggle);
 
 document.getElementById("logout")?.addEventListener("click", () => {
   localStorage.removeItem("currentUser");
-  location.pathname = "/authentication-system/index.html";
+  location.pathname = "web-masters-tasks/authentication-system/index.html";
 });
 
 if (location.pathname.includes("profile")) {
   if (!currentUser.isLoggedIn) {
-    location.pathname = "/authentication-system/index.html";
+    location.pathname = "web-masters-tasks/authentication-system/index.html";
   }
   document.getElementById(
     "welcome"
@@ -167,6 +169,6 @@ if (location.pathname.includes("profile")) {
 }
 if (location.pathname.includes("index")) {
   if (currentUser.isLoggedIn) {
-    location.pathname = "/authentication-system/profile.html";
+    location.pathname = "web-masters-tasks/authentication-system/profile.html";
   }
 }
