@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+@import "tailwindcss";
+
+body,
+button {
+  font-family: "Inter", serif;
+}
+
+
+
+@theme {
+  --color-main: #1F1F1F;
+  --color-secondary: #313131;
+  --color-light: #FFFFFF;
+  --color-viva-gray-50: #D1D1D1;
+  --color-viva-gray-100: #929292;
+  --color-viva-gray-200: #8C8C8C;
+  --color-viva-gray-300: #545454;
+  --text-viva-xl: 58px;
+  --text-viva-lg-max: 30px;
+  --text-viva-lg: 24px;
+  --text-viva-md: 22px;
+  --text-viva-base: 16px;
+}
+
+
+button {
+  @apply cursor-pointer
+}
+
+
+.btn {
+  @apply text-base bg-main border border-main px-6 py-3 text-light rounded-md duration-300 hover:bg-transparent hover:text-main
+}
